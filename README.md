@@ -1,2 +1,2 @@
 # Spatialtech
-Geographic Information System With AI
+Geographic Information System with AI
