@@ -5,7 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Faisal Amer | GIS Portfolio</title>
   <link rel="stylesheet" href="css/style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- Map Code -->
+<script>
+  var map = L.map('map').setView([33.6844, 73.0479], 12); // Example: Islamabad
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  // Optional marker
+  L.marker([33.6844, 73.0479]).addTo(map)
+    .bindPopup('Islamabad, Pakistan')
+    .openPopup();
+</script>
+
 <body>
   <header>
     <h1>Faisal Amer</h1>
@@ -16,6 +36,21 @@
       <a href="projects.html">Projects</a>
       <a href="contact.html">Contact</a>
     </nav>
+    
+<div id="map" style="height: 400px; width: 100%; margin: 20px 0;"></div>
+
+    <h3>Orthomosaic Mapping of Urban Development</h3>
+<p><strong>Objective:</strong> To generate a high-resolution orthomosaic of a residential development using drone imagery.</p>
+<p><strong>Tools:</strong> DJI Mavic 3 Pro, Pix4D Mapper, QGIS</p>
+<p><strong>My Role:</strong> Operated UAV for image acquisition, processed the orthomosaic in Pix4D, and analyzed land features in QGIS.</p>
+<p><strong>Result:</strong> Produced a 2.5 cm/pixel resolution map used for land planning and utility mapping.</p>
+
+<h3>Urban Expansion Monitoring Using GEE</h3>
+<p><strong>Objective:</strong> To detect urban sprawl in Multan between 2015–2023 using Sentinel-2 satellite imagery.</p>
+<p><strong>Tools:</strong> Google Earth Engine, JavaScript API</p>
+<p><strong>My Role:</strong> Developed a script to extract NDVI, LULC classification, and visualize change over time.</p>
+<p><strong>Result:</strong> Identified 23% increase in built-up area. Visuals used in planning reports.</p>
+
   </header>
 
   <section class="hero">
